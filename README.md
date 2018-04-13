@@ -16,7 +16,7 @@ or add ```"altynbek07/emtypograph": "^0.1"``` to the require section of your ```
 
 ## Using
 
-#####1. Running typograph with the default settings:
+1. Running typograph with the default settings:
 ```php
 use altynbek07\emtypograph\EMTypograph;
  
@@ -26,7 +26,7 @@ $result = $typograf->apply();
 echo "<i>Настройки по умолчанию</i>: " . $result . "\n";
 ```
 
-#####2. Manually сonfiguring rules:
+2. Manually сonfiguring rules:
 ```php
 use altynbek07\emtypograph\EMTypograph;
  
@@ -41,7 +41,7 @@ $result = $typograf->apply();
 echo "<i>Без параграфов, висячей пунктуации</i>: " . $result . "<br><br>\n";
 ```
 
-#####3. Quick running typograph with default settings:
+3. Quick running typograph with default settings:
 ```php
 use altynbek07\emtypograph\EMTypograph;
  
@@ -49,7 +49,7 @@ $result = EMTypograph::fast_apply("...Когда В. И. Пупкин увиде
 echo "<i>Быстрый запуск</i>: " . $result . "<br>\n";
 ```
 
-#####4. Quick running typograph with manual settings:
+4. Quick running typograph with manual settings:
 ```php
 use altynbek07\emtypograph\EMTypograph;
  
@@ -61,7 +61,7 @@ $result = EMTypograph::fast_apply("...Когда В. И. Пупкин увиде
 echo "<i>Быстрый запуск настройками</i>: " . $result . "<br><br>\n";
 ```
 
-#####5. Manually сonfiguring rules - use css classes instead of inline styles:
+5. Manually сonfiguring rules - use css classes instead of inline styles:
 ```php
 use altynbek07\emtypograph\EMTypograph;
  
