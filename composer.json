@@ -1,0 +1,34 @@
+{
+    "name": "altynbek07/emtypograph",
+    "description": "Typograph by Evgeny Muravjev",
+    "type": "extension",
+    "keywords": [
+        "yii2",
+        "laravel",
+        "php",
+        "typographer",
+        "typograph",
+        "типограф",
+        "evgeny",
+        "muravjev",
+        "евгений",
+        "муравьёв"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Altynbek Kazezov",
+            "email": "altinbek__97@mail.ru",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "altynbek07\\emtypograph\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}
