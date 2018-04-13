@@ -10,7 +10,7 @@
 
 Предпочтительным способом установки этого расширения является [Composer](http://getcomposer.org/).
 
-Запустите команду ```composer require altynbek07/emtypograph```
+Запустите команду ```composer require altynbek07/emtypograph:^0.1```
 
 или добавьте ```"altynbek07/emtypograph": "^0.1"``` в секцию зависимостей в файле ```composer.json```
 

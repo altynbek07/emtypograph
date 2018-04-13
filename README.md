@@ -10,7 +10,7 @@ Official site typograph: [http://mdash.ru/](http://mdash.ru/)
 
 The preferred way to install this extension is through [Composer](http://getcomposer.org/).
 
-Either run ```composer require altynbek07/emtypograph```
+Either run ```composer require altynbek07/emtypograph:^0.1```
 
 or add ```"altynbek07/emtypograph": "^0.1"``` to the require section of your ```composer.json```
 
