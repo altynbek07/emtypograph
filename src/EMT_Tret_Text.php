@@ -40,7 +40,7 @@ class EMT_Tret_Text extends EMT_Tret
             ),
             'replacement' => array(
                 '\1',
-                '$m[1].($m[7] === \altynbek07\emtypograph\EMT_Lib::strtolower($m[3]) ? $m[2] : $m[2].$m[5].$m[6] )',
+                '$m[1].($m[7] === \\altynbek07\\emtypograph\\EMT_Lib::strtolower($m[3]) ? $m[2] : $m[2].$m[5].$m[6] )',
             )
         ),
         'paragraphs' => array(
@@ -66,7 +66,7 @@ class EMT_Tret_Text extends EMT_Tret
         $text = '<' . self::BASE64_PARAGRAPH_TAG . '>' . trim($text) . '</' . self::BASE64_PARAGRAPH_TAG . '>';
         //$text = $this->preg_replace_e('/([\040\t]+)?(\n|\r){2,}/e', '"</" . self::BASE64_PARAGRAPH_TAG . "><" .self::BASE64_PARAGRAPH_TAG . ">"', $text);
         //$text = $this->preg_replace_e('/([\040\t]+)?(\n){2,}/e', '"</" . self::BASE64_PARAGRAPH_TAG . "><" .self::BASE64_PARAGRAPH_TAG . ">"', $text);
-        $text = $this->preg_replace_e('/([\040\t]+)?(\n)+([\040\t]*)(\n)+/e', '$m[1]."</" . self::BASE64_PARAGRAPH_TAG . ">".\altynbek07\emtypograph\EMT_Lib::iblock($m[2].$m[3])."<" .self::BASE64_PARAGRAPH_TAG . ">"', $text);
+        $text = $this->preg_replace_e('/([\040\t]+)?(\n)+([\040\t]*)(\n)+/e', '$m[1]."</" . self::BASE64_PARAGRAPH_TAG . ">".\\altynbek07\\emtypograph\\EMT_Lib::iblock($m[2].$m[3])."<" .self::BASE64_PARAGRAPH_TAG . ">"', $text);
         //$text = $this->preg_replace_e('/([\040\t]+)?(\n)+([\040\t]*)(\n)+/e', '"</" . self::BASE64_PARAGRAPH_TAG . ">"."<" .self::BASE64_PARAGRAPH_TAG . ">"', $text);
         //может от открвающего до закрывающего ?!
         $text = preg_replace('/\<' . self::BASE64_PARAGRAPH_TAG . '\>(' . EMT_Lib::INTERNAL_BLOCK_OPEN . '[a-zA-Z0-9\/=]+?' . EMT_Lib::INTERNAL_BLOCK_CLOSE . ')?\<\/' . self::BASE64_PARAGRAPH_TAG . '\>/s', "", $text);
@@ -102,7 +102,7 @@ class EMT_Tret_Text extends EMT_Tret
      */
     protected function build_brs()
     {
-        $this->_text = $this->preg_replace_e('/(\<\/' . self::BASE64_PARAGRAPH_TAG . '\>)([\r\n \t]+)(\<' . self::BASE64_PARAGRAPH_TAG . '\>)/mse', '$m[1].\altynbek07\emtypograph\EMT_Lib::iblock($m[2]).$m[3]', $this->_text);
+        $this->_text = $this->preg_replace_e('/(\<\/' . self::BASE64_PARAGRAPH_TAG . '\>)([\r\n \t]+)(\<' . self::BASE64_PARAGRAPH_TAG . '\>)/mse', '$m[1].\\altynbek07\\emtypograph\\EMT_Lib::iblock($m[2]).$m[3]', $this->_text);
 
         if (!preg_match('/\<' . self::BASE64_BREAKLINE_TAG . '\>/', $this->_text)) {
             $this->_text = str_replace("\r\n", "\n", $this->_text);

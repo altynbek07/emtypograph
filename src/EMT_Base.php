@@ -197,7 +197,7 @@ class EMT_Base
     public function safe_blocks($text, $way, $show = true)
     {
         if (count($this->_safe_blocks)) {
-            $safeType = true === $way ? "EMT_Lib::encrypt_tag(\$m[2])" : "stripslashes(EMT_Lib::decrypt_tag(\$m[2]))";
+            $safeType = true === $way ? "\\altynbek07\\emtypograph\\EMT_Lib::encrypt_tag(\$m[2])" : "stripslashes(\\altynbek07\\emtypograph\\EMT_Lib::decrypt_tag(\$m[2]))";
             $safeblocks = true === $way ? $this->_safe_blocks : array_reverse($this->_safe_blocks);
             foreach ($safeblocks as $block) {
                 $text = preg_replace_callback("/({$block['open']})(.+?)({$block['close']})/s", create_function('$m', 'return $m[1].' . $safeType . '.$m[3];'), $text);
